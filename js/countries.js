@@ -17,11 +17,14 @@ const displayCountries = (countries) =>{
 
 //option 2
 //parameter destructing
-const getCountryHTML = ({name, flags}) => {
+const getCountryHTML = ({name, flags, area,capital, region}) => {
     // const {name, flags} = country;
     return `
        <div class="country">
          <h2>${name.common}</h2>
+         <p>Area: ${area}</p>
+         <h4>${capital}</h4>
+         <p>Continent: ${region}</p>
          <img src="${flags.png}"/>
        </div>
     `
